@@ -1,5 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Allura|Lato:300i,400|Raleway:300,400,500,700,900&display=swap");
+
 body {
+  background: linear-gradient(#f3ca5c, #faf7ee);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
   margin: 0;
   padding: 0;
   @import "homepage";
+  @import "nav";
+  @import "profile";
+  @import "loginsignup";
+  @import "signup";
+  @import "login";
+  @import "post";
+  @import "feed";
+  @import "thumbnail";
+  @import "recipe";
+  @import "stars";
 }

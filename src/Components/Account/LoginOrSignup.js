@@ -3,13 +3,22 @@ import { Link } from "react-router-dom";
 
 const LoginOrSignup = () => {
   return (
-    <main>
+    <main className="choose-loginsignup">
       <Link to="/signup">
-        <button>New to CookBook? Let's create an account.</button>
+        <button className="choose-signup-button">
+          New to CookBook? Let's create an account.
+        </button>
       </Link>
       <Link to="/login">
-        <button>Already have an account? Sign in here</button>
+        <button className="choose-login-button">
+          Already have an account? Sign in here
+        </button>
       </Link>
+      <img
+        src="https://i.ya-webdesign.com/images/food-ingredients-png-2.png"
+        alt="ingredients"
+        className="loginsignup-picture"
+      />
     </main>
   );
 };

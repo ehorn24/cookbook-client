@@ -1,0 +1,32 @@
+.choose-loginsignup {
+  height: 666px;
+  margin-top: 70px;
+  text-align: center;
+  overflow: hidden;
+  .choose-login-button,
+  .choose-signup-button {
+    font-family: "Raleway";
+    font-weight: 700;
+    color: white;
+    font-size: 22px;
+    background-color: #1e3ca6;
+    border-radius: 2em;
+    border: 2px solid #1e3ca6;
+    padding: 8px 15px;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid white;
+    }
+  }
+  .choose-signup-button {
+    margin: 80px 30px 50px 30px;
+  }
+  .choose-login-button {
+    margin: 0 30px;
+  }
+  .loginsignup-picture {
+    width: 260px;
+    margin-top: 30px;
+    margin-left: 220px;
+  }
+}

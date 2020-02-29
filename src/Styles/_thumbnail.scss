@@ -1,0 +1,31 @@
+a {
+  text-decoration: none;
+}
+.recipe-thumbnail {
+  border: 1px solid #1e3ca6;
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 100%;
+  width: 150px;
+  margin: auto;
+  background-color: #faf7ee;
+
+  .thumbnail-name {
+    font-family: "Raleway";
+    color: #1e3ca6;
+    text-align: center;
+    margin: 8px 5px;
+  }
+  .thumbnail-pic-container {
+    width: 140px;
+    height: 140px;
+    margin: 3px auto;
+    overflow: hidden;
+    border: 2px solid #f3ca5c;
+    border-radius: 5px;
+
+    .thumbnail-pic {
+      width: 100%;
+    }
+  }
+}

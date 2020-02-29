@@ -1,0 +1,120 @@
+.homepage {
+  margin: 70px 0;
+  height: 750px;
+  text-align: center;
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    &:visited {
+      color: #1e3ca6;
+    }
+  }
+  .heading {
+    font-family: "Raleway";
+    font-weight: 900;
+    font-size: 40px;
+    color: white;
+    margin: 0 20px;
+    padding-top: 30px;
+  }
+  .tagline {
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: 24px;
+    color: #1e3ca6;
+    margin: 20px 35px;
+  }
+  .homepage-picture {
+    width: 350px;
+    position: relative;
+    left: -140px;
+    bottom: 20px;
+  }
+
+  .getstarted-button {
+    border-radius: 2em;
+    border: 2px solid #1e3ca6;
+    margin: 12px auto;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    background-color: #1e3ca6;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    &:hover {
+      border: 2px solid white;
+    }
+    &:active {
+      background-color: #5c7df2;
+    }
+  }
+
+  .landing {
+    height: 400px;
+    .desc-heading {
+      margin: 0;
+      font-family: "Raleway";
+      font-size: 25px;
+      font-weight: 400;
+      color: #1e3ca6;
+    }
+    .title {
+      font-family: "Allura";
+      font-size: 50px;
+      font-weight: bold;
+    }
+    .app-desc {
+      font-family: "Raleway";
+      font-size: 20px;
+      margin: 10px 15px;
+      color: #1e3ca6;
+      font-weight: 400;
+      line-height: 25px;
+    }
+  }
+}
+
+/*
+.intro {
+    margin-top: 0;
+    height: 600px;
+    .container {
+      background-image: url("https://i.pinimg.com/originals/d7/a0/2f/d7a02fcd9d83b89cf9a8e6c94d6c6ed6.jpg");
+      background-size: cover;
+      height: 500px;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.25;
+      z-index: 1;
+    }
+    .heading {
+      margin-top: 0;
+      font-family: "Allura";
+      font-size: 100px;
+      color: orange;
+      z-index: 3;
+      position: relative;
+      font-weight: bold;
+    }
+    .tagline {
+      font-family: "Lato";
+      position: relative;
+      width: 75%;
+      top: 100px;
+      font-size: 25px;
+      color: white;
+      z-index: 3;
+      font-weight: bold;
+    }
+  }
+  */

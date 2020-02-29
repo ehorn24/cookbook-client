@@ -1,0 +1,89 @@
+.signup-page {
+  margin-top: 70px;
+  font-family: "Raleway";
+  .signup-tagline {
+    text-align: center;
+    color: #1e3ca6;
+    font-size: 24px;
+    margin: 90px 20px 20px 20px;
+  }
+  .form-container {
+    width: 350px;
+    font-family: "Raleway";
+    margin: 0 auto;
+    .signup-fieldset {
+      text-align: center;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      margin: 0px 0px 10px 0px;
+      border: 2px solid #1e3ca6;
+      padding: 20px;
+      box-shadow: inset 0px 0px 15px white;
+      -moz-box-shadow: inset 0px 0px 15px white;
+      -webkit-box-shadow: inset 0px 0px 15px white;
+    }
+    .field-label {
+      display: block;
+      margin-bottom: 10px;
+      .label-span {
+        float: left;
+        width: 100%;
+        color: #1e3ca6;
+        font-size: 18px;
+      }
+    }
+    .field-input {
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border: 1px solid #f3ca5c;
+      outline: none;
+      color: #1e3ca6;
+      padding: 8px;
+      font-size: 12px;
+      box-shadow: inset 1px 1px 4px #f3ca5c;
+      -moz-box-shadow: inset 1px 1px 4px #f3ca5c;
+      -webkit-box-shadow: inset 1px 1px 4px #f3ca5c;
+      background: #faf7ee;
+      width: 70%;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .signup-button {
+      border-radius: 2em;
+      border: 2px solid #1e3ca6;
+      margin: 12px auto 0 auto;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 14px;
+      color: white;
+      background-color: #1e3ca6;
+      text-align: center;
+      cursor: pointer;
+      display: block;
+      &:hover {
+        border: 2px solid white;
+      }
+      &:active {
+        background-color: #5c7df2;
+      }
+    }
+  }
+  .have-account {
+    color: #1e3ca6;
+    text-align: center;
+    font-size: 16px;
+    a {
+      text-decoration: none;
+      font-family: "Allura";
+      font-size: 35px;
+      cursor: pointer;
+      &:visited {
+        color: #1e3ca6;
+      }
+    }
+  }
+}
