@@ -20,7 +20,7 @@ const Login = ({
               type="text"
               name="username"
               id="username"
-              placeholder="Enter username"
+              placeholder="Username"
               value={userData.username}
               onChange={handleFormChange}
               className="field-input"
@@ -44,11 +44,18 @@ const Login = ({
         </form>
       </div>
       <h4 className="no-account">
-        Don't have an account yet? Create one{" "}
+        Don't have an account yet?
+        <br></br>
+        Create one{" "}
         <Link to="/signup" onClick={clearState}>
           here!
         </Link>
       </h4>
+      <img
+        className="login-picture"
+        src="https://www.avantiatibis.com/img/plate.png"
+        alt="food"
+      />
     </main>
   );
 };

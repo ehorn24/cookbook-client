@@ -49,3 +49,192 @@
     }
   }
 }
+.recipe-page {
+  margin-top: 100px;
+  .recipe-title {
+    font-family: "Allura";
+    color: white;
+    letter-spacing: 1px;
+    line-height: 55px;
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 0;
+    margin: 0 10px;
+  }
+  .recipe-username {
+    font-family: "Raleway";
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e3ca6;
+    margin-top: 0px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    margin-bottom: 15px;
+    a {
+      color: #1e3ca6;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  .editdelete-flexbox {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+    .delete-recipe-button {
+      padding: 10px 15px;
+    }
+    .edit-recipe-button {
+      padding: 10px 25px;
+    }
+    .edit-recipe-button,
+    .delete-recipe-button {
+      border-radius: 2em;
+      border: 2px solid #1e3ca6;
+      margin: 12px 10px;
+      text-decoration: none;
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      color: white;
+      background-color: #1e3ca6;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      &:hover {
+        border: 2px solid white;
+      }
+      &:active {
+        background-color: #5c7df2;
+      }
+    }
+  }
+  .save-button {
+    display: block;
+    margin: 25px auto;
+    border-radius: 5px;
+    border: 2px solid #1e3ca6;
+    background-color: #1e3ca6;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    height: 35px;
+    color: white;
+    &:hover {
+      border: 2px solid white;
+    }
+  }
+  .recipe-photo-container {
+    width: 340px;
+    height: 340px;
+    border: 2px solid #1e3ca6;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px auto;
+    background-size: cover;
+    .recipe-photo {
+      max-width: 360px;
+    }
+  }
+  .ing-ins-container {
+    .ingredients-title,
+    .instructions-title {
+      font-family: "Raleway";
+      color: #1e3ca6;
+      font-size: 18px;
+      letter-spacing: 0.2px;
+      margin: 25px 0 10px 25px;
+    }
+    .ingredients-list,
+    .instructions-list {
+      line-height: 22px;
+      color: #1e3ca6;
+      font-family: "Raleway";
+      font-size: 16px;
+      margin: 0 20px 20px 15px;
+      .ingredients-li,
+      .instructions-li {
+        padding: 3px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .recipe-page {
+    .recipe-photo-container {
+      width: 450px;
+      height: 450px;
+      border: 2px solid #1e3ca6;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 10px auto;
+      background-size: cover;
+      .recipe-photo {
+        max-width: 360px;
+      }
+    }
+    .ing-ins-container {
+      width: 80%;
+      margin: 0 auto;
+      .ingredients-title,
+      .instructions-title {
+        font-family: "Raleway";
+        color: #1e3ca6;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+        margin: 25px 0 10px 25px;
+      }
+      .ingredients-list,
+      .instructions-list {
+        color: #1e3ca6;
+        font-family: "Raleway";
+        font-size: 16px;
+        margin: 0 20px 20px 15px;
+        .ingredients-li,
+        .instructions-li {
+          padding: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .recipe-page {
+    margin: 100px 30px 30px 30px;
+    .recipe-photo-container {
+      width: 450px;
+      height: 450px;
+      margin: 10px auto;
+      background-size: cover;
+      .recipe-photo {
+        max-width: 360px;
+      }
+    }
+    .ing-ins-container {
+      .ingredients-title,
+      .instructions-title {
+        font-family: "Raleway";
+        color: #1e3ca6;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+        margin: 25px 0 10px 25px;
+      }
+      .ingredients-list,
+      .instructions-list {
+        line-height: 22px;
+        color: #1e3ca6;
+        font-family: "Raleway";
+        font-size: 16px;
+        margin: 0 20px 20px 15px;
+        .ingredients-li,
+        .instructions-li {
+          padding: 3px;
+        }
+      }
+    }
+  }
+}

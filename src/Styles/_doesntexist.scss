@@ -1,0 +1,16 @@
+.doesnt-exist {
+  margin: 90px 20px;
+  font-family: "Raleway";
+  font-size: 26px;
+  text-align: center;
+  font-weight: 700;
+  color: #1e3ca6;
+  letter-spacing: 1px;
+  a {
+    text-decoration: underline;
+    color: white;
+    &:hover {
+      color: #1e3ca6;
+    }
+  }
+}

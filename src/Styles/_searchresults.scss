@@ -1,0 +1,45 @@
+.search-results-page {
+  margin-top: 90px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: white;
+    &:visited {
+      color: white;
+    }
+  }
+  .search-again {
+    border-radius: 2em;
+    border: 2px solid #1e3ca6;
+    margin: 12px 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #1e3ca6;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+      border: 2px solid white;
+    }
+    &:active {
+      background-color: #5c7df2;
+    }
+  }
+  .results-flexbox {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .search-header {
+    font-family: "Raleway";
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    margin: 8px;
+  }
+}

@@ -6,10 +6,10 @@
   padding: 5px;
   border-radius: 5px;
   max-width: 90%;
-  width: 500px;
   margin: 30px auto;
   background-color: #faf7ee;
   font-family: "Raleway";
+  flex-grow: 1;
   a {
     text-decoration: none;
     color: #1e3ca6;
@@ -51,7 +51,55 @@
   }
   .post-recipename {
     font-size: 16px;
-    margin: 5px 0;
+    margin: 10px 0;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .post {
+    .post-user {
+      .post-username-a {
+        margin: 20px 0 20px 10px;
+      }
+      .post-username {
+        font-size: 16px;
+      }
+      .post-userphoto-container {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    .post-recipephoto {
+      width: 400px;
+      height: 400px;
+    }
+    .post-recipename {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .post {
+    .post-user {
+      .post-username-a {
+        margin: 25px 0 25px 10px;
+      }
+      .post-username {
+        font-size: 18px;
+      }
+      .post-userphoto-container {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .post-recipephoto {
+      width: 500px;
+      height: 500px;
+    }
+    .post-recipename {
+      font-size: 20px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 export const getAllUsers = username => {
-  return fetch("/api/users/", {
+  return fetch("/api/user/", {
     method: "GET",
     headers: {
       "Content-Type": "application/json"

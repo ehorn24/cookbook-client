@@ -2,6 +2,7 @@
   margin-top: 80px;
   a {
     color: white;
+    cursor: pointer;
   }
   .profile-info {
     .profile-username {
@@ -19,11 +20,10 @@
       overflow: hidden;
       margin: 0 auto;
       text-align: center;
-      .profile-pic {
-        max-width: 200%;
-        max-height: 200%;
-      }
+      background-size: cover;
+      background: center;
     }
+
     .profile-name {
       text-align: center;
       font-size: 50px;
@@ -40,8 +40,8 @@
     }
     .current-user-buttons {
       text-align: center;
-      .edit-profile-button,
-      .saved-recipes-button {
+      .saved-recipes-button,
+      .edit-profile-button {
         border-radius: 2em;
         border: 2px solid #1e3ca6;
         margin: 12px 10px;
@@ -67,17 +67,151 @@
   }
   .profile-recipes {
     margin-bottom: 100px;
+    .add-recipe-button {
+      border-radius: 2em;
+      border: 2px solid #1e3ca6;
+      margin: 15px 10px 10px 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      color: white;
+      background-color: #1e3ca6;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      &:hover {
+        border: 2px solid white;
+      }
+      &:active {
+        background-color: #5c7df2;
+      }
+    }
     .recipes-head {
       text-align: center;
       font-family: "Allura";
       font-size: 35px;
       margin-top: 30px;
       color: #1e3ca6;
+      margin-bottom: 10px;
     }
     .recipes-flexbox {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .profile-page {
+    margin-top: 100px;
+    .profile-info {
+      width: 40%;
+      float: left;
+      margin-bottom: 30px;
+      .profile-username {
+        text-align: center;
+        font-family: "Raleway";
+        color: white;
+        font-size: 26px;
+        margin: 18px;
+      }
+      .profile-pic-container {
+        width: 270px;
+        height: 270px;
+        border: 2px solid #1e3ca6;
+        border-radius: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        text-align: center;
+        .profile-pic {
+          max-width: 200%;
+          max-height: 200%;
+        }
+      }
+
+      .profile-name {
+        text-align: center;
+        font-size: 50px;
+        margin: 12px;
+        font-family: "Allura";
+        color: #1e3ca6;
+      }
+      .profile-bio {
+        text-align: center;
+        margin: 12px 15px;
+        font-family: "Raleway";
+        font-size: 18px;
+        color: #1e3ca6;
+      }
+      .current-user-buttons {
+        text-align: center;
+        .saved-recipes-button,
+        .edit-profile-button {
+          border-radius: 2em;
+          border: 2px solid #1e3ca6;
+          margin: 12px 10px;
+          padding: 10px 15px;
+          text-decoration: none;
+          font-family: "Raleway";
+          font-weight: 700;
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          color: white;
+          background-color: #1e3ca6;
+          text-align: center;
+          cursor: pointer;
+          display: inline-block;
+          &:hover {
+            border: 2px solid white;
+          }
+          &:active {
+            background-color: #5c7df2;
+          }
+        }
+      }
+    }
+    .profile-recipes {
+      margin-bottom: 100px;
+      padding-top: 1px;
+      .add-recipe-button {
+        border-radius: 2em;
+        border: 2px solid #1e3ca6;
+        margin: 15px 10px 10px 10px;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-family: "Raleway";
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        color: white;
+        background-color: #1e3ca6;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        &:hover {
+          border: 2px solid white;
+        }
+        &:active {
+          background-color: #5c7df2;
+        }
+      }
+      .recipes-head {
+        text-align: center;
+        font-family: "Allura";
+        font-size: 35px;
+        margin-top: 30px;
+        color: #1e3ca6;
+        margin-bottom: 10px;
+      }
+      .recipes-flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
     }
   }
 }

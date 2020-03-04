@@ -1,32 +1,69 @@
 .choose-loginsignup {
-  height: 666px;
   margin-top: 70px;
   text-align: center;
   overflow: hidden;
-  .choose-login-button,
-  .choose-signup-button {
-    font-family: "Raleway";
-    font-weight: 700;
-    color: white;
-    font-size: 22px;
-    background-color: #1e3ca6;
-    border-radius: 2em;
-    border: 2px solid #1e3ca6;
-    padding: 8px 15px;
-    cursor: pointer;
-    &:hover {
-      border: 2px solid white;
+  .buttons-div {
+    margin-bottom: 30px;
+    .choose-login-button,
+    .choose-signup-button {
+      font-family: "Raleway";
+      font-weight: 700;
+      color: white;
+      font-size: 18px;
+      background-color: #1e3ca6;
+      border-radius: 2em;
+      border: 2px solid #1e3ca6;
+      padding: 8px 15px;
+      width: 290px;
+      cursor: pointer;
+      &:hover {
+        border: 2px solid white;
+      }
     }
-  }
-  .choose-signup-button {
-    margin: 80px 30px 50px 30px;
-  }
-  .choose-login-button {
-    margin: 0 30px;
+    .choose-signup-button {
+      margin: 80px 30px 50px 30px;
+    }
+    .choose-login-button {
+      margin: 0 30px 20px 30px;
+      clear: right;
+    }
   }
   .loginsignup-picture {
     width: 260px;
-    margin-top: 30px;
-    margin-left: 220px;
+    float: right;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .choose-loginsignup {
+    .buttons-div {
+      margin-bottom: 30px;
+      .choose-login-button,
+      .choose-signup-button {
+        font-size: 20px;
+        width: 450px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .choose-loginsignup {
+    .loginsignup-picture {
+      width: 350px;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .choose-loginsignup {
+    .buttons-div {
+      margin-top: 100px;
+      .choose-login-button,
+      .choose-signup-button {
+        display: block;
+        margin: 50px auto;
+      }
+    }
   }
 }

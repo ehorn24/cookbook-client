@@ -15,7 +15,14 @@ body {
   @import "login";
   @import "post";
   @import "feed";
-  @import "thumbnail";
+  @import "recipethumbnail";
   @import "recipe";
-  @import "stars";
+  @import "saves";
+  @import "editprofile";
+  @import "addrecipe";
+  @import "searchresults";
+  @import "userthumbnail";
+  @import "notauth";
+  @import "doesntexist";
+  @import "searchbar";
 }

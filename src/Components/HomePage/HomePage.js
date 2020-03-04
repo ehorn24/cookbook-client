@@ -39,6 +39,32 @@ const HomePage = ({ isLoggedIn }) => {
           Post your own recipe and share it with the world. Have your cookbook,
           and everyone else's, right in your hand.
         </p>
+        <h4 className="how-to-use-head">How to use CookBook:</h4>
+        <div className="how-to-use">
+          <p>
+            Click the "Let's get started" button up at the top of the page. The
+            easy-to-use interface will ask you if you want to create an account
+            or log in to an existing one. To create an account, just enter some
+            basic information, pick a username and password, select a photo URL
+            (if you want to choose a picture from your device, please upload to
+            a third-party service like Imgur and get a URL), and write a bio.
+          </p>
+          <p>
+            If you don't want to create an account, no problem. We've set up a
+            user for you to test out CookBook with. Just log in with these
+            credentials:
+            <br></br>
+            Username: bobsmith
+            <br></br>
+            Password: iambobsmith
+          </p>
+          <p>Now get cookin'!</p>
+        </div>
+        <img
+          className="homepage-bottom-picture"
+          src="https://frontierenaturalmeats.com/wp-content/themes/frontiere/images/hero-meat.png"
+          alt="ingredients"
+        />
       </section>
     </main>
   );

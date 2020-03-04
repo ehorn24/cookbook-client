@@ -1,7 +1,7 @@
 .homepage {
   margin: 70px 0;
-  height: 750px;
   text-align: center;
+  overflow: hidden;
   a {
     cursor: pointer;
     text-decoration: none;
@@ -12,7 +12,7 @@
   .heading {
     font-family: "Raleway";
     font-weight: 900;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     margin: 0 20px;
     padding-top: 30px;
@@ -20,14 +20,14 @@
   .tagline {
     font-family: "Raleway";
     font-weight: 400;
-    font-size: 24px;
+    font-size: 18px;
     color: #1e3ca6;
     margin: 20px 35px;
   }
   .homepage-picture {
-    width: 350px;
+    width: 300px;
     position: relative;
-    left: -140px;
+    left: -120px;
     bottom: 20px;
   }
 
@@ -35,11 +35,11 @@
     border-radius: 2em;
     border: 2px solid #1e3ca6;
     margin: 12px auto;
-    padding: 15px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
     background-color: #1e3ca6;
     text-align: center;
@@ -52,69 +52,202 @@
       background-color: #5c7df2;
     }
   }
-
   .landing {
-    height: 400px;
     .desc-heading {
-      margin: 0;
+      margin: 0 20px;
       font-family: "Raleway";
-      font-size: 25px;
+      font-size: 20px;
       font-weight: 400;
       color: #1e3ca6;
     }
     .title {
       font-family: "Allura";
-      font-size: 50px;
+      font-size: 40px;
       font-weight: bold;
     }
     .app-desc {
       font-family: "Raleway";
-      font-size: 20px;
+      font-size: 16px;
       margin: 10px 15px;
       color: #1e3ca6;
       font-weight: 400;
-      line-height: 25px;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+    }
+    .how-to-use-head {
+      font-family: "Raleway";
+      font-size: 18px;
+      margin-top: 50px;
+      color: #1e3ca6;
+    }
+    .how-to-use {
+      font-family: "Raleway";
+      color: #1e3ca6;
+      margin: 25px;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      line-height: 20px;
+    }
+    .homepage-bottom-picture {
+      width: 300px;
+      position: relative;
+      left: 50px;
+      margin-bottom: 80px;
+      transform: rotate(180deg);
     }
   }
 }
 
-/*
-.intro {
-    margin-top: 0;
-    height: 600px;
-    .container {
-      background-image: url("https://i.pinimg.com/originals/d7/a0/2f/d7a02fcd9d83b89cf9a8e6c94d6c6ed6.jpg");
-      background-size: cover;
-      height: 500px;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      opacity: 0.25;
-      z-index: 1;
-    }
+@media screen and (min-width: 600px) {
+  .homepage {
     .heading {
-      margin-top: 0;
-      font-family: "Allura";
-      font-size: 100px;
-      color: orange;
-      z-index: 3;
-      position: relative;
-      font-weight: bold;
+      padding-top: 70px;
+      font-size: 40px;
     }
     .tagline {
-      font-family: "Lato";
-      position: relative;
-      width: 75%;
-      top: 100px;
-      font-size: 25px;
-      color: white;
-      z-index: 3;
-      font-weight: bold;
+      font-size: 20px;
+    }
+    .homepage-picture {
+      margin-top: 30px;
+      position: static;
+      width: 350px;
+      float: left;
+    }
+    .getstarted-button {
+      font-size: 14px;
+    }
+    .landing {
+      margin-top: 70px;
+      .desc-heading {
+        font-size: 20px;
+      }
+      .title {
+        font-size: 35px;
+      }
+      .app-desc {
+        font-size: 16px;
+        margin: 10px 35px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+      }
+      .how-to-use-head {
+        margin-top: 90px;
+        font-size: 20px;
+        padding: 5px;
+        margin-bottom: 0;
+      }
+      .how-to-use {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 55px;
+        letter-spacing: 0.5px;
+      }
+      .homepage-bottom-picture {
+        width: 450px;
+        left: 120px;
+      }
     }
   }
-  */
+}
+
+@media screen and (min-width: 750px) {
+  .homepage {
+    margin-top: 100px;
+    .heading {
+      font-size: 50px;
+      margin: 40px 40px 20px 40px;
+    }
+    .tagline {
+      font-size: 22px;
+      margin: 30px 120px;
+    }
+    .getstarted-button {
+      font-size: 16px;
+    }
+    .homepage-picture {
+      position: static;
+      width: 400px;
+      float: left;
+    }
+    .landing {
+      .desc-heading {
+        margin-top: 70px;
+        font-size: 22px;
+        .title {
+          font-size: 40px;
+        }
+      }
+      .app-desc {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.5px;
+      }
+      .how-to-use-head {
+        margin-top: 150px;
+        font-size: 22px;
+        padding: 5px;
+        margin-bottom: 0;
+      }
+      .how-to-use {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 55px;
+        letter-spacing: 0.5px;
+      }
+      .homepage-bottom-picture {
+        margin-top: 30px;
+        width: 450px;
+        left: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .homepage {
+    .heading {
+      font-size: 60px;
+      margin: 25px 140px;
+    }
+    .tagline {
+      font-size: 26px;
+      margin: 30px 180px;
+    }
+    .getstarted-button {
+      font-size: 16px;
+    }
+    .homepage-picture {
+      width: 500px;
+      float: left;
+    }
+    .landing {
+      margin-top: 150px;
+      .desc-heading {
+        font-size: 24px;
+        .title {
+          font-size: 40px;
+        }
+      }
+      .app-desc {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+      }
+      .how-to-use-head {
+        font-size: 24px;
+        padding: 5px;
+        margin-top: 250px;
+      }
+      .how-to-use {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0px 100px;
+        letter-spacing: 0.7px;
+      }
+      .homepage-bottom-picture {
+        width: 600px;
+        left: 300px;
+      }
+    }
+  }
+}

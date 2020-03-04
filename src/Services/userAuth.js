@@ -1,5 +1,5 @@
 export const userAuth = (username, password) => {
-  return fetch("/api/users/login", {
+  return fetch("/api/user/login", {
     method: "POST",
     body: JSON.stringify({ username, password }),
     headers: {

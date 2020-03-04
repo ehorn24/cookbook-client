@@ -2,20 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navigation = ({ mode, logOut, currentUser }) => {
-  switch (mode) {
-    case "loggedout":
-      return (
-        <nav role="navigation" className=".nav-bar">
-          <Link to="/">
-            <span className="nav-appname">CookBook.</span>
-          </Link>
-        </nav>
-      );
-
-    case "loggedin":
-      return (
-        <nav role="navigation" className=".nav-bar">
-          <div className="nav-background"></div>
+  return (
+    <>
+      {mode === "loggedin" ? (
+        <nav className="loggedin-nav">
           <div className="menu-toggle">
             <input type="checkbox" className="menu-checkbox" />
             <span className="menu-span first-child"></span>
@@ -34,20 +24,17 @@ const Navigation = ({ mode, logOut, currentUser }) => {
               <li onClick={logOut}>Sign Out</li>
             </ul>
           </div>
+          <h2 className="loggedin-appname">CookBook.</h2>
+        </nav>
+      ) : (
+        <nav className="loggedout-nav">
           <Link to="/">
-            <h1 className="nav-appname">CookBook.</h1>
+            <span className="loggedout-appname">CookBook.</span>
           </Link>
         </nav>
-      );
-    default:
-      return (
-        <nav className=".nav-bar" role="navigation">
-          <Link to="/">
-            <span className="nav-appname">CookBook.</span>
-          </Link>
-        </nav>
-      );
-  }
+      )}
+    </>
+  );
 };
 
 export default Navigation;

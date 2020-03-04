@@ -1,0 +1,106 @@
+.feed-flex-container {
+  display: flex;
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+  align-items: center;
+  .feed-search {
+    flex-grow: 2;
+    border: 2px solid #1e3ca6;
+    border-radius: 5px;
+    padding: 7px;
+    background-color: #faf7ee;
+    margin: 5px;
+    width: 60%;
+    .feed-form {
+      width: 100%;
+    }
+    .feed-search-label {
+      font-family: "Raleway";
+      color: #1e3ca6;
+      font-weight: 700;
+      margin-right: 8px;
+      width: 20%;
+      font-size: 14px;
+    }
+    .feed-search-input {
+      font-family: "Raleway";
+      color: #1e3ca6;
+      font-weight: 500;
+      border: 2px solid #f3ca5c;
+      border-radius: 5px;
+      width: 60%;
+      margin-right: 8px;
+    }
+    .search-button {
+      height: 20px;
+      width: 20px;
+      padding: 5px;
+      border: 2px solid #1e3ca6;
+      border-radius: 5px;
+      background-color: #1e3ca6;
+      background-image: url("https://www.rrtrainers.com/wp-content/uploads/magnifying-glass-white.png");
+      background-size: cover;
+      background-position: center;
+      &:hover {
+        border: 2px solid #f3ca5c;
+      }
+    }
+  }
+  .feed-post {
+    border-radius: 2em;
+    border: 2px solid #1e3ca6;
+    padding: 6px;
+    text-decoration: none;
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #1e3ca6;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+      border: 2px solid white;
+    }
+    &:active {
+      background-color: #5c7df2;
+    }
+    a {
+      color: white;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .feed-flex-container {
+    max-width: 500px;
+    .feed-search {
+      .feed-search-label {
+        margin-right: 10px;
+        font-size: 16px;
+      }
+      .feed-search-input {
+        font-size: 12px;
+        padding: 5px 35px 5px 5px;
+        margin-right: 10px;
+      }
+      .search-button {
+        height: 25px;
+        width: 25px;
+        padding: 7px;
+      }
+    }
+    .feed-post {
+      font-size: 16px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .feed-flex-container {
+    max-width: 600px;
+  }
+}

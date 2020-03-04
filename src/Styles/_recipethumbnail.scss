@@ -7,14 +7,15 @@ a {
   border-radius: 5px;
   max-width: 100%;
   width: 150px;
-  margin: auto;
+  margin: 8px auto;
   background-color: #faf7ee;
 
   .thumbnail-name {
     font-family: "Raleway";
+    font-weight: 500;
     color: #1e3ca6;
     text-align: center;
-    margin: 8px 5px;
+    margin: 8px 0px;
   }
   .thumbnail-pic-container {
     width: 140px;
@@ -23,9 +24,23 @@ a {
     overflow: hidden;
     border: 2px solid #f3ca5c;
     border-radius: 5px;
-
+    background-size: 185px;
     .thumbnail-pic {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .recipe-thumbnail {
+    width: 250px;
+    .thumbnail-name {
+      font-size: 18px;
+    }
+    .thumbnail-pic-container {
+      width: 240px;
+      height: 240px;
+      background-size: 400px;
     }
   }
 }

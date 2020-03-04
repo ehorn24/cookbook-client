@@ -1,18 +1,17 @@
-.login-page {
+.add-recipe-page {
   margin-top: 70px;
   font-family: "Raleway";
-
-  .login-tagline {
+  .add-recipe-tagline {
     text-align: center;
     color: #1e3ca6;
     font-size: 24px;
     margin: 90px 20px 20px 20px;
   }
-  .form-container {
+  .add-form-container {
     width: 350px;
     font-family: "Raleway";
     margin: 0 auto;
-    .login-fieldset {
+    .add-recipe-fieldset {
       text-align: center;
       border-radius: 10px;
       -webkit-border-radius: 10px;
@@ -35,6 +34,7 @@
       }
     }
     .field-input {
+      font-family: "Raleway";
       border-radius: 3px;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
@@ -51,7 +51,7 @@
       margin-bottom: 12px;
       text-align: center;
     }
-    .login-button {
+    .submit-recipe-button {
       border-radius: 2em;
       border: 2px solid #1e3ca6;
       margin: 12px auto 0 auto;
@@ -72,32 +72,35 @@
         background-color: #5c7df2;
       }
     }
-  }
-  .no-account {
-    color: #1e3ca6;
-    text-align: center;
-    font-size: 16px;
-    margin: 30px 30px 0 30px;
-    a {
-      text-decoration: none;
-      font-family: "Allura";
-      font-size: 30px;
-      cursor: pointer;
-      &:visited {
-        color: #1e3ca6;
+    textarea {
+      vertical-align: middle;
+      font-family: "Raleway";
+    }
+    .x-button {
+      background-color: #faf7ee;
+      border: 1px solid #f3ca5c;
+      border-radius: 5px;
+      font-family: "Raleway";
+      font-weight: 700;
+      color: #1e3ca6;
+      display: inline-block;
+      margin-left: 5px;
+      &:hover {
+        border: 1px solid #1e3ca6;
       }
     }
-  }
-  .login-picture {
-    float: right;
-    width: 200px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .login-page {
-    .login-picture {
-      width: 300px;
+    .add-ingredient-button,
+    .add-instruction-button {
+      border: 1px solid #f3ca5c;
+      border-radius: 5px;
+      padding: 5px;
+      margin-bottom: 8px;
+      font-family: "Raleway";
+      color: #1e3ca6;
+      background-color: #faf7ee;
+      &:hover {
+        border: 1px solid #1e3ca6;
+      }
     }
   }
 }

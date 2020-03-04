@@ -1,17 +1,16 @@
-export const createUser = (
+export const editProfile = (
+  id,
   firstname,
   lastname,
-  username,
   password,
   profilepicture,
   profilebio
 ) => {
-  return fetch("/api/user/", {
-    method: "POST",
+  return fetch(`/api/user/${id}`, {
+    method: "PATCH",
     body: JSON.stringify({
       firstname,
       lastname,
-      username,
       password,
       profilepicture,
       profilebio
@@ -19,5 +18,5 @@ export const createUser = (
     headers: {
       "Content-Type": "application/json"
     }
-  }).then(res => res.json());
+  });
 };

@@ -1,18 +1,17 @@
-.login-page {
+.edit-profile-page {
   margin-top: 70px;
   font-family: "Raleway";
-
-  .login-tagline {
+  .edit-profile-tagline {
     text-align: center;
     color: #1e3ca6;
     font-size: 24px;
     margin: 90px 20px 20px 20px;
   }
-  .form-container {
+  .edit-form-container {
     width: 350px;
     font-family: "Raleway";
     margin: 0 auto;
-    .login-fieldset {
+    .edit-profile-fieldset {
       text-align: center;
       border-radius: 10px;
       -webkit-border-radius: 10px;
@@ -50,8 +49,9 @@
       width: 70%;
       margin-bottom: 12px;
       text-align: center;
+      font-family: "Raleway";
     }
-    .login-button {
+    .edit-profile-button {
       border-radius: 2em;
       border: 2px solid #1e3ca6;
       margin: 12px auto 0 auto;
@@ -71,33 +71,6 @@
       &:active {
         background-color: #5c7df2;
       }
-    }
-  }
-  .no-account {
-    color: #1e3ca6;
-    text-align: center;
-    font-size: 16px;
-    margin: 30px 30px 0 30px;
-    a {
-      text-decoration: none;
-      font-family: "Allura";
-      font-size: 30px;
-      cursor: pointer;
-      &:visited {
-        color: #1e3ca6;
-      }
-    }
-  }
-  .login-picture {
-    float: right;
-    width: 200px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .login-page {
-    .login-picture {
-      width: 300px;
     }
   }
 }

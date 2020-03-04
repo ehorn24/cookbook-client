@@ -1,18 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const Signup = ({
-  userData,
+const EditProfilePg = ({
   handleFormChange,
-  handleSignupSubmit,
-  clearState
+  handleEditProfile,
+  userData,
+  userId
 }) => {
   return (
-    <main className="signup-page">
-      <h3 className="signup-tagline">Create an account and get cookin'.</h3>
-      <div className="form-container">
-        <form onSubmit={handleSignupSubmit} className="signup-form">
-          <fieldset className="signup-fieldset">
+    <main className="edit-profile-page">
+      <h1 className="edit-profile-tagline">
+        Edit any part of your profile here.
+      </h1>
+      <div className="edit-form-container">
+        <form
+          onSubmit={e => {
+            handleEditProfile(e, userId.id);
+          }}
+          className="edit-profile-form"
+        >
+          <fieldset className="edit-profile-fieldset">
             <label htmlFor="firstname" className="field-label">
               <span className="label-span">First Name</span>
             </label>
@@ -33,17 +39,6 @@ const Signup = ({
               id="lastname"
               onChange={handleFormChange}
               value={userData.lastname}
-              className="field-input"
-            />
-            <label htmlFor="username" className="field-label">
-              <span className="label-span">Username</span>
-            </label>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              onChange={handleFormChange}
-              value={userData.username}
               className="field-input"
             />
             <label htmlFor="password" className="field-label">
@@ -90,25 +85,14 @@ const Signup = ({
               value={userData.profilebio}
               className="field-input"
             ></textarea>
-            <button type="submit" className="signup-button">
+            <button type="submit" className="edit-profile-button">
               Submit
             </button>
           </fieldset>
         </form>
       </div>
-      <h4 className="have-account">
-        Already have an account? Log in{" "}
-        <Link to="/login" onClick={clearState}>
-          here!
-        </Link>
-      </h4>
-      <img
-        className="signup-fruit"
-        src="https://crispygreen.com/wp-content/uploads/2018/04/image-apples-hero.png"
-        alt="fruit"
-      />
     </main>
   );
 };
 
-export default Signup;
+export default EditProfilePg;
