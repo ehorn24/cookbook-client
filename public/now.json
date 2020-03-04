@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "cookbook-app",
+  "alias": "ellahorn-cookbook-app",
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 export const getSaves = () => {
-  return fetch(`/api/savedrecipe/`, {
+  return fetch(`https://shielded-wave-32873.herokuapp.com/api/savedrecipe/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json"

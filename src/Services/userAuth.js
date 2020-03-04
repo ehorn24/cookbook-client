@@ -1,5 +1,5 @@
 export const userAuth = (username, password) => {
-  return fetch("/api/user/login", {
+  return fetch(`https://shielded-wave-32873.herokuapp.com/api/user/login`, {
     method: "POST",
     body: JSON.stringify({ username, password }),
     headers: {

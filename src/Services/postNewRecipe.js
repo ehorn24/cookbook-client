@@ -5,7 +5,7 @@ export const postNewRecipe = (
   ingredients,
   steps
 ) => {
-  return fetch("/api/recipe/", {
+  return fetch(`https://shielded-wave-32873.herokuapp.com/api/recipe/`, {
     method: "POST",
     body: JSON.stringify({
       username,

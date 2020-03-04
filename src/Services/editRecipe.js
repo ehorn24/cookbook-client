@@ -5,7 +5,7 @@ export const editRecipe = (
   ingredients,
   instructions
 ) => {
-  return fetch(`/api/recipe/${id}`, {
+  return fetch(`https://shielded-wave-32873.herokuapp.com/api/recipe/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
       recipename,

@@ -6,7 +6,7 @@ export const editProfile = (
   profilepicture,
   profilebio
 ) => {
-  return fetch(`/api/user/${id}`, {
+  return fetch(`https://shielded-wave-32873.herokuapp.com/api/user/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
       firstname,

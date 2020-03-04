@@ -6,7 +6,7 @@ export const createUser = (
   profilepicture,
   profilebio
 ) => {
-  return fetch("/api/user/", {
+  return fetch(`https://shielded-wave-32873.herokuapp.com/api/user/`, {
     method: "POST",
     body: JSON.stringify({
       firstname,
