@@ -223,7 +223,9 @@ export default class App extends Component {
     for (let i = 0; i < arr.length; i++) {
       if (
         query.some(word =>
-          JSON.stringify(arr[i].recipename.toLowerCase()).includes(word)
+          JSON.stringify(arr[i].recipename)
+            .toLowerCase()
+            .includes(word.toLowerCase())
         )
       ) {
         recipeResult.push(arr[i]);
