@@ -18,5 +18,5 @@ export const editProfile = (
     headers: {
       "Content-Type": "application/json"
     }
-  }).then(res => res.json());
+  });
 };

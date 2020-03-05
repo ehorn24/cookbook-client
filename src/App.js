@@ -360,7 +360,7 @@ export default class App extends Component {
         password,
         profilepicture,
         profilebio
-      );
+      ).then(res => console.log(res));
       this.setState(
         {
           firstname: "",
