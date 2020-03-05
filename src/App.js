@@ -348,6 +348,7 @@ export default class App extends Component {
       profilepicture,
       profilebio
     } = this.state;
+
     if (password && confirmpassword && password !== confirmpassword) {
       window.alert("Passwords do not match.");
     } else if (password && confirmpassword && password.length < 8) {
@@ -360,7 +361,7 @@ export default class App extends Component {
         password,
         profilepicture,
         profilebio
-      ).then(res => console.log(res));
+      );
       this.setState(
         {
           firstname: "",
