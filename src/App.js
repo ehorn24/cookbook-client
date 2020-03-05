@@ -199,7 +199,7 @@ export default class App extends Component {
     let userResult = [];
     for (let i = 0; i < arr.length; i++) {
       if (
-        query.some(
+        query.toLowerCase().some(
           word =>
             JSON.stringify(arr[i].firstname)
               .toLowerCase()
