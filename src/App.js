@@ -201,9 +201,15 @@ export default class App extends Component {
       if (
         query.some(
           word =>
-            JSON.stringify(arr[i].firstname.toLowerCase()).includes(word) ||
-            JSON.stringify(arr[i].lastname.toLowerCase()).includes(word) ||
-            JSON.stringify(arr[i].username.toLowerCase()).includes(word)
+            JSON.stringify(arr[i].firstname)
+              .toLowerCase()
+              .includes(word.toLowerCase()) ||
+            JSON.stringify(arr[i].lastname)
+              .toLowerCase()
+              .includes(word.toLowerCase()) ||
+            JSON.stringify(arr[i].username)
+              .toLowerCase()
+              .includes(word.toLowerCase())
         )
       ) {
         userResult.push(arr[i]);
