@@ -8,5 +8,5 @@ CookBook was built to make your life easier in the kitchen. Create a profile and
 
 Screenshots:
 
-![Uploading Screen Shot 2020-03-04 at 10.04.16 PM.png…]()
+<img width="651" alt="Screenshot of Home Page" src="https://user-images.githubusercontent.com/52179940/88744305-f3ea6f80-d114-11ea-88a1-4e704b83fa32.png">
 Home Page
