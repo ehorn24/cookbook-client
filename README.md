@@ -6,10 +6,11 @@ Technologies Used: JavaScript, React, Node, Express, PostgreSQL
 
 CookBook was built to make your life easier in the kitchen. Create a profile and have access to thousands of other recipes from people just like you. Save recipes you've tried and loved, or save them to try later. Post your own recipe and share it with the world. Have your cookbook, and everyone else's, right in your hand.
 
-Screenshots:
+Screenshots (screen names are below their respective photo):
 
 
-<img width="651" alt="Screenshot of Home Page" src="https://user-images.githubusercontent.com/52179940/88744305-f3ea6f80-d114-11ea-88a1-4e704b83fa32.png">Home Page
+<img width="651" alt="Screenshot of Home Page" src="https://user-images.githubusercontent.com/52179940/88744305-f3ea6f80-d114-11ea-88a1-4e704b83fa32.png">
+Home Page
 
 
 <img width="653" alt="Log In Screen" src="https://user-images.githubusercontent.com/52179940/88744359-18dee280-d115-11ea-8c78-07203289140f.png">
