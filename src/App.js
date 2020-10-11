@@ -44,10 +44,10 @@ export default class App extends Component {
     savedrecipes: [],
     searchterm: "",
     usersearchresults: [],
-    recipesearchresults: []
+    recipesearchresults: [],
   };
 
-  clearState = e => {
+  clearState = (e) => {
     this.setState({
       firstname: "",
       lastname: "",
@@ -63,7 +63,7 @@ export default class App extends Component {
       savedrecipes: [],
       searchterm: "",
       usersearchresults: [],
-      recipesearchresults: []
+      recipesearchresults: [],
     });
   };
 
@@ -81,7 +81,7 @@ export default class App extends Component {
           ),
           recipesearchresults: JSON.parse(
             localStorage.getItem("recipesearchresults")
-          )
+          ),
         });
       }
     }
@@ -91,18 +91,18 @@ export default class App extends Component {
     localStorage.state = JSON.stringify(this.state);
   }
 
-  handleFormChange = e => {
+  handleFormChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
   //user-related (account, signup/login)
   getUsers = () => {
-    getAllUsers().then(users => {
+    getAllUsers().then((users) => {
       this.setState({ users });
     });
   };
 
-  handleSignupSubmit = e => {
+  handleSignupSubmit = (e) => {
     e.preventDefault();
     const {
       firstname,
@@ -111,7 +111,7 @@ export default class App extends Component {
       password,
       confirmpassword,
       profilepicture,
-      profilebio
+      profilebio,
     } = this.state;
     if (password !== confirmpassword) {
       window.alert("Passwords do not match.");
@@ -125,7 +125,7 @@ export default class App extends Component {
         password,
         profilepicture,
         profilebio
-      ).then(res => {
+      ).then((res) => {
         if (!res.error) {
           this.setState(
             {
@@ -136,7 +136,7 @@ export default class App extends Component {
               profilepicture: "",
               loggedin: true,
               redirecttofeed: true,
-              users: [...this.state.users, res]
+              users: [...this.state.users, res],
             },
             () => {
               if (typeof Storage !== "undefined") {
@@ -155,9 +155,9 @@ export default class App extends Component {
     }
   };
 
-  handleLoginSubmit = e => {
+  handleLoginSubmit = (e) => {
     e.preventDefault();
-    userAuth(this.state.username, this.state.password).then(res => {
+    userAuth(this.state.username, this.state.password).then((res) => {
       if (res === "OK") {
         this.setState(
           {
@@ -166,7 +166,7 @@ export default class App extends Component {
             password: "",
             confirmpassword: "",
             loggedin: true,
-            redirecttofeed: true
+            redirecttofeed: true,
           },
           () => {
             if (typeof Storage !== undefined) {
@@ -182,7 +182,7 @@ export default class App extends Component {
     });
   };
 
-  logOut = e => {
+  logOut = (e) => {
     e.preventDefault();
     this.clearState();
     if (typeof Storage !== "undefined") {
@@ -200,7 +200,7 @@ export default class App extends Component {
     for (let i = 0; i < arr.length; i++) {
       if (
         query.some(
-          word =>
+          (word) =>
             JSON.stringify(arr[i].firstname)
               .toLowerCase()
               .includes(word.toLowerCase()) ||
@@ -222,7 +222,7 @@ export default class App extends Component {
     let recipeResult = [];
     for (let i = 0; i < arr.length; i++) {
       if (
-        query.some(word =>
+        query.some((word) =>
           JSON.stringify(arr[i].recipename)
             .toLowerCase()
             .includes(word.toLowerCase())
@@ -234,7 +234,7 @@ export default class App extends Component {
     return recipeResult;
   };
 
-  handleSearchSubmit = e => {
+  handleSearchSubmit = (e) => {
     e.preventDefault();
     const searchFor = this.state.searchterm.split(" ");
     const getUsers = this.state.users;
@@ -244,7 +244,7 @@ export default class App extends Component {
     this.setState(
       {
         usersearchresults: [...userResults],
-        recipesearchresults: [...recipeResults]
+        recipesearchresults: [...recipeResults],
       },
       () => {
         if (typeof Storage !== "undefined") {
@@ -264,7 +264,7 @@ export default class App extends Component {
 
   //post-recipe related
   getRecipes = () => {
-    getAllRecipes().then(recipes => {
+    getAllRecipes().then((recipes) => {
       this.setState({ recipes });
     });
   };
@@ -282,10 +282,10 @@ export default class App extends Component {
       recipephoto,
       [...ingredients],
       [...steps]
-    ).then(res => {
+    ).then((res) => {
       if (!res.error) {
         this.setState({
-          recipes: [...this.state.recipes, res]
+          recipes: [...this.state.recipes, res],
         });
         window.location.href = `/recipe/${recipename}`;
       } else {
@@ -294,10 +294,10 @@ export default class App extends Component {
     });
   };
 
-  handleDeleteRecipe = id => {
-    deleteRecipe(id).then(res => {
+  handleDeleteRecipe = (id) => {
+    deleteRecipe(id).then((res) => {
       if (!res.error) {
-        const recipes = this.state.recipes.filter(r => !(r.id === id));
+        const recipes = this.state.recipes.filter((r) => !(r.id === id));
         this.setState({ recipes });
       }
     });
@@ -306,13 +306,13 @@ export default class App extends Component {
 
   //saved recipe-related
   getAllSaves = () => {
-    getSaves().then(sRec => {
+    getSaves().then((sRec) => {
       this.setState({ savedrecipes: sRec });
     });
   };
 
   handleSaveSubmit = (recipe_id, user_saved) => {
-    newSave(recipe_id, user_saved).then(res => {
+    newSave(recipe_id, user_saved).then((res) => {
       if (!res.error) {
         this.setState({ savedrecipes: [...this.state.savedrecipes, res] });
       }
@@ -320,10 +320,10 @@ export default class App extends Component {
   };
 
   handleDeleteSave = (recipe_id, user_saved) => {
-    unsave(recipe_id, user_saved).then(res => {
+    unsave(recipe_id, user_saved).then((res) => {
       if (!res.error) {
         const savedrecipes = this.state.savedrecipes.filter(
-          r => !(r.recipe_id === recipe_id && r.user_saved === user_saved)
+          (r) => !(r.recipe_id === recipe_id && r.user_saved === user_saved)
         );
         this.setState({ savedrecipes });
       }
@@ -346,7 +346,7 @@ export default class App extends Component {
       password,
       confirmpassword,
       profilepicture,
-      profilebio
+      profilebio,
     } = this.state;
 
     if (password && confirmpassword && password !== confirmpassword) {
@@ -369,7 +369,7 @@ export default class App extends Component {
           password: "",
           confirmpassword: "",
           profilepicture: "",
-          loggedin: true
+          loggedin: true,
         },
         () => {
           if (typeof Storage !== "undefined") {
@@ -394,7 +394,7 @@ export default class App extends Component {
           <Route
             exact
             path="/"
-            render={props => (
+            render={(props) => (
               <>
                 <HomePage {...props} isLoggedIn={this.state.loggedin} />
               </>
@@ -403,7 +403,7 @@ export default class App extends Component {
           <Route
             exact
             path="/loginsignup"
-            render={props => (
+            render={(props) => (
               <>
                 <LoginOrSignup {...props} />
               </>
@@ -412,7 +412,7 @@ export default class App extends Component {
           <Route
             exact
             path="/signup"
-            render={props => (
+            render={(props) => (
               <>
                 <Signup
                   userData={this.state}
@@ -427,7 +427,7 @@ export default class App extends Component {
           <Route
             exact
             path="/login"
-            render={props => (
+            render={(props) => (
               <>
                 <Login
                   userData={this.state}
@@ -445,7 +445,7 @@ export default class App extends Component {
               <Route
                 exact
                 path="/feed"
-                render={props => (
+                render={(props) => (
                   <>
                     <ActivityFeed
                       currentUser={this.state.username}
@@ -462,7 +462,7 @@ export default class App extends Component {
               <Route
                 exact
                 path="/profile/:username"
-                render={props => (
+                render={(props) => (
                   <>
                     <Profile
                       {...props}
@@ -476,7 +476,7 @@ export default class App extends Component {
               <Route
                 exact
                 path="/recipe/:recipename"
-                render={props => (
+                render={(props) => (
                   <>
                     <Recipe
                       {...props}
@@ -493,11 +493,11 @@ export default class App extends Component {
               <Route
                 exact
                 path="/profile/:username/saved"
-                render={props => (
+                render={(props) => (
                   <Saves
                     currentUser={this.state.username}
                     yourSaves={this.state.savedrecipes.filter(
-                      s => s.user_saved === this.state.username
+                      (s) => s.user_saved === this.state.username
                     )}
                     allRecipes={this.state.recipes}
                   />
@@ -506,23 +506,25 @@ export default class App extends Component {
               <Route
                 exact
                 path="/profile/:username/edit"
-                render={props => (
+                render={(props) => (
                   <EditProfilePg
+                    {...props}
                     userData={this.state}
                     userId={
                       this.state.users.filter(
-                        user => user.username === this.state.username
+                        (user) => user.username === this.state.username
                       )[0]
                     }
                     handleFormChange={this.handleFormChange}
                     handleEditProfile={this.handleEditProfile}
+                    users={this.state.users}
                   />
                 )}
               />
               <Route
                 exact
                 path="/profile/:username/addrecipe"
-                render={props => (
+                render={(props) => (
                   <AddRecipe
                     currentUser={this.state.username}
                     handleFormSubmit={this.handleRecipeSubmit}
@@ -532,7 +534,7 @@ export default class App extends Component {
               <Route
                 exact
                 path="/search"
-                render={props => (
+                render={(props) => (
                   <SearchResults
                     userResults={this.state.usersearchresults}
                     recipeResults={this.state.recipesearchresults}
@@ -550,12 +552,12 @@ export default class App extends Component {
                 "/profile/:username/saved",
                 "/profile/:username/edit",
                 "/profile/:username/addrecipe",
-                "/search/:query"
+                "/search/:query",
               ]}
-              render={props => <NotAuth />}
+              render={(props) => <NotAuth />}
             />
           )}
-          <Route render={props => <DoesntExist />} />
+          <Route render={(props) => <DoesntExist />} />
         </Switch>
       </Router>
     );
