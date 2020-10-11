@@ -12,15 +12,15 @@ const Navigation = ({ mode, logOut, currentUser }) => {
             <span className="menu-span second-child"></span>
             <span className="menu-span third-child"></span>
             <ul className="hamburger-menu">
-              <Link to="/feed">
+              <a href="/feed">
                 <li>Feed</li>
-              </Link>
-              <Link to={`/profile/${currentUser}`}>
+              </a>
+              <a href={`/profile/${currentUser}`}>
                 <li>My Profile</li>
-              </Link>
-              <Link to="/">
+              </a>
+              <a href="/">
                 <li>About CookBook</li>
-              </Link>
+              </a>
               <li onClick={logOut}>Sign Out</li>
             </ul>
           </div>
