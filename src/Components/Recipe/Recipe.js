@@ -8,15 +8,19 @@ const Recipe = ({
   currentUser,
   allSaves,
   handleDeleteSave,
-  handleDeleteRecipe
+  handleDeleteRecipe,
 }) => {
   const currentRecipe = showRecipe.filter(
-    r => r.recipename === match.params.recipename
+    (r) => r.recipename === match.params.recipename
   );
-
-  const getWhoSaved = allSaves.filter(s => s.recipe_id === currentRecipe[0].id);
+  if (!currentRecipe[0]) {
+    return null;
+  }
+  const getWhoSaved = allSaves.filter(
+    (s) => s.recipe_id === currentRecipe[0].id
+  );
   const didCurrentUserSave =
-    getWhoSaved.filter(save => save.user_saved === currentUser).length === 1
+    getWhoSaved.filter((save) => save.user_saved === currentUser).length === 1
       ? true
       : false;
 
@@ -33,7 +37,7 @@ const Recipe = ({
             {didCurrentUserSave ? (
               <button
                 className="save-button"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   handleDeleteSave(rec.id, currentUser);
                 }}
@@ -43,7 +47,7 @@ const Recipe = ({
             ) : (
               <button
                 className="save-button"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   handleSave(rec.id, currentUser);
                 }}
@@ -60,7 +64,7 @@ const Recipe = ({
               <div className="editdelete-flexbox">
                 <button
                   className="delete-recipe-button"
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     handleDeleteRecipe(rec.id);
                   }}

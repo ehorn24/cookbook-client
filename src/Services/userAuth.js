@@ -3,7 +3,7 @@ export const userAuth = (username, password) => {
     method: "POST",
     body: JSON.stringify({ username, password }),
     headers: {
-      "Content-Type": "application/json"
-    }
-  }).then(res => res.json());
+      "Content-Type": "application/json",
+    },
+  }).then((res) => res.json());
 };

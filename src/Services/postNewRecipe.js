@@ -12,10 +12,10 @@ export const postNewRecipe = (
       recipename,
       recipephoto,
       ingredients,
-      steps
+      steps,
     }),
     headers: {
-      "Content-Type": "application/json"
-    }
-  }).then(res => res.json());
+      "Content-Type": "application/json",
+    },
+  }).then((res) => res.json());
 };

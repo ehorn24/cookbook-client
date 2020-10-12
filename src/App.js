@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import { createUser } from "./Services/createUser";
 import { userAuth } from "./Services/userAuth";
 import { Redirect } from "react-router-dom";
@@ -28,7 +28,7 @@ import SearchResults from "./Components/Search/SearchResults";
 import NotAuth from "./Components/Errors/NotAuth";
 import DoesntExist from "./Components/Errors/DoesntExist";
 
-export default class App extends Component {
+class App extends Component {
   state = {
     firstname: "",
     lastname: "",
@@ -145,7 +145,7 @@ export default class App extends Component {
               }
             }
           );
-          window.location.href = "/feed";
+          this.props.history.push("/feed");
         } else {
           window.alert(
             "Sorry, looks like something is missing. Please make sure you filled out all the fields."
@@ -175,7 +175,7 @@ export default class App extends Component {
             }
           }
         );
-        window.location.href = "/feed";
+        this.props.history.push("/feed");
       } else {
         window.alert("Invalid credentials.");
       }
@@ -191,7 +191,7 @@ export default class App extends Component {
       }
       localStorage.removeItem("loggedin");
     }
-    window.location.href = "/";
+    this.props.history.push("/");
   };
 
   //search-related
@@ -259,7 +259,7 @@ export default class App extends Component {
         }
       }
     );
-    window.location.href = `/search`;
+    this.props.history.push(`/search`);
   };
 
   //post-recipe related
@@ -287,7 +287,7 @@ export default class App extends Component {
         this.setState({
           recipes: [...this.state.recipes, res],
         });
-        window.location.href = `/recipe/${recipename}`;
+        this.props.history.push(`/recipe/${recipename}`);
       } else {
         window.alert("Sorry, that didn't post correctly. Please try again.");
       }
@@ -298,10 +298,11 @@ export default class App extends Component {
     deleteRecipe(id).then((res) => {
       if (!res.error) {
         const recipes = this.state.recipes.filter((r) => !(r.id === id));
-        this.setState({ recipes });
+        this.setState({ recipes }, () => {
+          this.props.history.push(`/profile/${this.state.username}`);
+        });
       }
     });
-    window.location.href = `/profile/${this.state.username}`;
   };
 
   //saved recipe-related
@@ -378,13 +379,13 @@ export default class App extends Component {
           }
         }
       );
-      window.location.href = `/profile/${this.state.username}`;
+      this.props.history.push(`/profile/${this.state.username}`);
     }
   };
 
   render() {
     return (
-      <Router>
+      <>
         <Navigation
           mode={this.state.loggedin ? "loggedin" : "loggedout"}
           logOut={this.logOut}
@@ -559,7 +560,9 @@ export default class App extends Component {
           )}
           <Route render={(props) => <DoesntExist />} />
         </Switch>
-      </Router>
+      </>
     );
   }
 }
+
+export default withRouter(App);

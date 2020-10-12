@@ -4,8 +4,8 @@ export const unsave = (recipe_id, user_saved) => {
     {
       method: "DELETE",
       headers: {
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     }
   );
 };

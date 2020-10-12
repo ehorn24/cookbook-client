@@ -13,10 +13,10 @@ export const editProfile = (
       lastname,
       password,
       profilepicture,
-      profilebio
+      profilebio,
     }),
     headers: {
-      "Content-Type": "application/json"
-    }
-  }).then(res => res.json());
+      "Content-Type": "application/json",
+    },
+  }).then((res) => res.json());
 };

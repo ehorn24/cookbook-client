@@ -11,10 +11,10 @@ export const editRecipe = (
       recipename,
       recipephoto,
       ingredients,
-      instructions
+      instructions,
     }),
     headers: {
-      "Content-Type": "application/json"
-    }
+      "Content-Type": "application/json",
+    },
   });
 };

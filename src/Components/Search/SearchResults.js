@@ -24,7 +24,6 @@ const SearchResults = ({ userResults, recipeResults }) => {
           </div>
           <div className="results-flexbox">
             {userResults.map((result, i) => {
-              console.log(result.profilepicture);
               return (
                 <UserThumbnail
                   key={i}

@@ -14,10 +14,10 @@ export const createUser = (
       username,
       password,
       profilepicture,
-      profilebio
+      profilebio,
     }),
     headers: {
-      "Content-Type": "application/json"
-    }
-  }).then(res => res.json());
+      "Content-Type": "application/json",
+    },
+  }).then((res) => res.json());
 };
